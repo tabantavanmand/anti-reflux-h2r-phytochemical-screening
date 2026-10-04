@@ -29,7 +29,7 @@ Due to the absence of high-resolution human H2R crystallographic data at the tim
 
 <p align=“center”>
 
-<img src=“swiss_model_h2r.jpg” alt=“SWISS-MODEL H2R Structure” width=“650”><br>
+<img src="swiss_model_h2r.jpg" alt="SWISS-MODEL H2R Structure" width="650">
 
 <em>Figure 2: 3D Homology model of human Histamine H2 Receptor generated via SWISS-MODEL with transmembrane helices aligned.</em>
 
@@ -118,6 +118,6 @@ anti-reflux-h2r-phytochemical-screening/
 * Collaborative Research Team: Equal collaborative contributions across target homology modeling, docking simulations, pharmacokinetic evaluation, and formulation design:
   * Taban Tavanmand *(documented as Atefeh Tavanmand in original academic course records)*
   * Samaneh Kazem
-  * Mahya Mohammaddzaheri
+  * Mahya Mohammadzaheri
 
 > *Disclaimer: This repository represents translational academic and in-silico pharmaceutical research developed for educational, portfolio, and methodology demonstration purposes.*
