@@ -43,6 +43,11 @@ Due to the absence of high-resolution human H2R crystallographic data at the tim
 
 *Figure 2: 3D Homology model of human Histamine H2 Receptor generated via SWISS-MODEL with transmembrane bundle conformation and structural quality evaluation.*
 
+<p align="center">
+  <img src="energy_minimization.jpg" alt="Energy Minimization Convergence" width="650"><br>
+  <em>Figure 3: Iterative energy minimization convergence curve across 20 cycles demonstrating structural thermodynamic stabilization.</em>
+</p>
+
 Stereochemical and backbone conformational validity was verified using Ramachandran Plot Analysis:
 
 ![Ramachandran Plot](ramachandran_plot.jpg)
