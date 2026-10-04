@@ -15,23 +15,12 @@ By integrating homology modeling, energy minimization, docking simulations again
 
 ---
 ## 🔬 Computational Pipeline & Methodology
-┌────────────────────────┐ ┌─────────────────────────┐ ┌─────────────────────────┐
-
-│ Target 3D Modeling │ ───> │ Phytochemical Library │ ───> │ AutoDock 4 Screening │
-
-│ (SWISS-MODEL / SPDBV) │ │ (PubChem / ChemBio3D) │ │ (LGA, 50 Runs vs Ctrl) │
-
-└────────────────────────┘ └─────────────────────────┘ └─────────────────────────┘
-
-│
-
-┌────────────────────────┐ ┌─────────────────────────┐ │
-
-│ Industrial Formulation │ <─── │ ADMET / Toxicity │ <─────────────────┘
-
-│ (Hard Candy Scale-up) │ │ (pkCSM / admetSAR) │
-
-└────────────────────────┘ └─────────────────────────┘
+* Phase 1: Target Preparation & 3D Homology Modeling (SWISS-MODEL & SPDBV GROMOS96)
+* Phase 2: Bioactive Phytochemical Library Construction (PubChem & MM2 Energy Minimization)
+* Phase 3: Molecular Docking & Benchmark Validation (AutoDock 4 / LGA with 50 runs per ligand)
+* Phase 4: Pharmacokinetic & ADMET Safety Profiling (pkCSM & admetSAR)
+* Phase 5: Industrial Scale-Up & Formulation Design (Hard Candy Matrix & Vacuum Cooking)
+---
 ### 1. Target Preparation & Homology Modeling
 * Receptor: Human Histamine $H_2$ Receptor ($H_2R$).
 * Accession: UniProtKB: P25021 (359 amino acids).
