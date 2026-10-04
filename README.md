@@ -26,16 +26,16 @@ Histamine released from enterochromaffin-like (ECL) cells binds to the basolater
 
 ---
 
-## 🛠️ Computational Pipeline & Methodology
+## 🔬 Computational Pipeline & Methodology
+
+```text
 [Target Sequence (P25021)] ──> [SWISS-MODEL Homology] ──> [Ramachandran Validation]
+                                                                  │
+                                                                  ▼
+[Scale-Up & Master Formula] <── [ADMET / Safety] <── [AutoDock 4 Docking Pipeline]
 
-│
+---
 
-[Phytochemical & Benchmark Library] ──> [Ligand Prep] ───────────────┼──> [AutoDock 4 Docking]
-
-│
-
-[Scale-Up & Master Formula] <── [ADMET / Safety] <── [Binding Site Contact Profiling]
 ### 1. Homology Modeling & Structural Validation
 Due to the absence of high-resolution human H2R crystallographic data at the time of modeling, homology modeling was performed using SWISS-MODEL.
 
@@ -74,17 +74,21 @@ Molecular docking was executed using AutoDock 4 (Lamarckian Genetic Algorithm). 
 | Phytochemical Lead 03 | Alkaloid Derivative | -7.61 | Low $\mu$M | Asp186, Thr190, Trp247 | 2 |
 | Benchmark Control | Reference H2R Antagonist | -7.10 | Reference | Asp98, Asp186 | 2 |
 
-### Structural Binding Poses
+`markdown
+## 🧬 Structural Binding Poses
 
-#### Reference Benchmark Antagonist
-![Benchmark Drug Docking Pose](docking_benchmark_pose.jpg)
+### Reference Benchmark Antagonist
 
-*Figure 5: Binding conformation of benchmark reference antagonist showing key anchoring interactions in the orthosteric pocket.*
+<p align="center">
+  <img src="docking_benchmark_pose.jpg" alt="Benchmark Drug Docking Pose" width="600"><br>
+  <em>Figure 5: Binding conformation of benchmark reference antagonist showing key anchoring interactions in the orthosteric pocket.</em>
+</p>
 
-#### Lead Phytochemical Candidates
+### Lead Phytochemical Candidates
+
 | Phytochemical Lead 01 | Phytochemical Lead 02 | Phytochemical Lead 03 |
 | :---: | :---: | :---: |
-| ![Lead Compound 01](docking_pose_01.jpg) | ![Lead Compound 02](docking_pose_02.jpg) | ![Lead Compound 03](docking_pose_03.jpg) |
+| <img src="docking_pose_01.jpg" width="280"> | <img src="docking_pose_02.jpg" width="280"> | <img src="docking_pose_03.jpg" width="280"> |
 | *Lead 01 Docking Pose* | *Lead 02 Docking Pose* | *Lead 03 Docking Pose* |
 
 ---
@@ -107,25 +111,21 @@ To translate the computational lead into a commercial product, a solid oral loze
 ---
 
 ## 📂 Repository Structure
+
+```text
 anti-reflux-h2r-phytochemical-screening/
+│
+├── README.md                      # Comprehensive project documentation
+├── gastric_acid_pathway.jpg       # Target pathway & biological context
+├── swiss_model_h2r.jpg            # Homology modeling result
+├── energy_minimization.jpg        # Structural energy minimization profile
+├── ramachandran_plot.jpg          # Stereochemical validation plot
+├── binding_site_contacts.jpg      # Active site contact frequency
+├── docking_benchmark_pose.jpg     # Reference drug docking pose
+├── docking_pose_01.jpg            # Lead candidate 01 docking pose
+├── docking_pose_02.jpg            # Lead candidate 02 docking pose
+└── docking_pose_03.jpg            # Lead candidate 03 docking pose
 
-├── README.md # Comprehensive project documentation
-
-├── gastric_acid_pathway.jpg # Target pathway & biological context
-
-├── swiss_model_h2r.jpg # Homology modeling result
-
-├── ramachandran_plot.jpg # Stereochemical validation plot
-
-├── binding_site_contacts.jpg # Active site contact frequency
-
-├── docking_benchmark_pose.jpg # Reference drug docking pose
-
-├── docking_pose_01.jpg # Lead candidate 01 docking pose
-
-├── docking_pose_02.jpg # Lead candidate 02 docking pose
-
-└── docking_pose_03.jpg # Lead candidate 03 docking pose
 ---
 
 ## 👥 Project Background & Team Attribution
