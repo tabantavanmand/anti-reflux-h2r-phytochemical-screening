@@ -85,7 +85,7 @@ Unlike purely academic screenings, this project engineered a complete industrial
 ---
 
 ## 📂 Repository Structure
-`text
+```text
 anti-reflux-h2r-phytochemical-screening/
 ├── README.md                 # Full project documentation and technical report
 └── figures/                   # 2D/3D interaction diagrams, Ramachandran plots (in progress)
