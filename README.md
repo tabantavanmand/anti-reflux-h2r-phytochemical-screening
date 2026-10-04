@@ -41,6 +41,12 @@ The modeled apoprotein structure was subjected to 20 cycles of steepest descent 
   <img src="energy_minimization.jpg" alt="Energy Minimization Convergence" width="650"><br>
   <em>Figure 3: Iterative energy minimization convergence curve across 20 cycles demonstrating structural thermodynamic stabilization.</em>
 </p>
+<p align="center">
+  <img src="ramachandran_plot.jpg" alt="Ramachandran Plot Validation" width="650">
+</p>
+<p align="center">
+  <em>Figure 4: Ramachandran plot validation showing stereochemical backbone dihedral angles and model structural integrity.</em>
+</p>
 
 ---
 
