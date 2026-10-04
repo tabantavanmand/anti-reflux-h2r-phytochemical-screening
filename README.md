@@ -50,8 +50,11 @@ The orthosteric binding pocket was defined around critical conserved residues re
 
 <p align="center">
   <img src="binding_site_contacts.jpg" alt="Active Site Contact Frequency" width="650"><br>
-  <em>Figure 5: Binding site residue contact frequency and pocket interaction topology.</em>
+  <p align="center">
+  <img src="binding_site_contacts.jpg" alt="Active Site Residue Contacts" width="650">
 </p>
+
+*Figure 5: Binding site residue contact frequency and pocket interaction topology.*
 
 ---
 
