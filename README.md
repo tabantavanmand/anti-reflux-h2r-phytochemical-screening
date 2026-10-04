@@ -16,13 +16,15 @@ Overactivation of this pathway is the central driver of gastric hyperacidity, pe
 ---
 
 ## 🔄 Computational Pipeline & Methodology
-
 ```text
 [Target Sequence (P25021)] ──> [SWISS-MODEL Homology] ──> [Energy Minimization] ──> [Ramachandran Validation]
                                                                                               │
                                                                                               ▼
 [Master Formula & Lozenge] <── [ADMET Profiling] <── [AutoDock 4 Docking Pipeline] <── [Active Site Mapping]
-1. Homology Modeling & Structural Validation
+
+```
+
+### 1. Homology Modeling & Structural Validation
 Due to the absence of high-resolution human H2R crystallographic data at the time of modeling, homology modeling was performed using SWISS-MODEL using high-homology Class A GPCR templates.
 
 <p align=“center”>
