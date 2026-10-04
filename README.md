@@ -15,49 +15,62 @@ Overactivation of this pathway is the central driver of gastric hyperacidity, pe
 
 ---
 
-## 🔄 Computational Pipeline & Methodology
+## 🔄 Computational Pipeline & Dual-Track Methodology
 ```text
-[Target Sequence (P25021)] ──> [SWISS-MODEL Homology] ──> [Energy Minimization] ──> [Ramachandran Validation]
-                                                                                              │
-                                                                                              ▼
-[Master Formula & Lozenge] <── [ADMET Profiling] <── [AutoDock 4 Docking Pipeline] <── [Active Site Mapping]
-
+[ Target Track: Protein Preparation ]
+UniProt (P25021) ──> SWISS-MODEL Homology ──> Energy Minimization (SPDBV) ──> Ramachandran Validation
+│
+▼
+[ Active Site Mapping ]
+│
+▼
+[ Ligand Track: Phytochemical Library ]                                      [ AutoDock 4 Docking ]
+65+ Anti-Reflux Plants ──> Bioactive Extraction ──> admetSAR / pkCSM Filter ───────────┘
+(AMES, hERG, LD50, Carc.)           │
+▼
+[ Top Lead Candidates ]
+│
+▼
+[ Formulation & Lozenge ]
 ```
+### 1. Target Preparation & Homology Modeling
+Due to the absence of high-resolution human H2R crystallographic data at the time of modeling, homology modeling was performed using SWISS-MODEL utilizing high-homology Class A GPCR templates.
 
-### 1. Homology Modeling & Structural Validation
-Due to the absence of high-resolution human H2R crystallographic data at the time of modeling, homology modeling was performed using SWISS-MODEL using high-homology Class A GPCR templates.
-
-<p align=“center”>
-
-<img src="swiss_model_h2r.jpg" alt="SWISS-MODEL H2R Structure" width="650">
-
-<em>Figure 2: 3D Homology model of human Histamine H2 Receptor generated via SWISS-MODEL with transmembrane helices aligned.</em>
-
+<p align="center">
+  <img src="swiss_model_h2r.jpg" alt="SWISS-MODEL H2R Structure" width="650"/><br/>
+  <em>Figure 2: 3D Homology model of human Histamine H2 Receptor generated via SWISS-MODEL with transmembrane helices aligned.</em>
 </p>
 
+### 2. Energy Minimization & Structural Validation
 The modeled apoprotein structure was subjected to 20 cycles of steepest descent and conjugate gradient energy minimization to relieve steric clashes and optimize bond geometry:
 
 <p align="center">
-  <img src="energy_minimization.jpg" alt="Energy Minimization Convergence" width="650"><br>
+  <img src="energy_minimization.jpg" alt="Energy Minimization Convergence" width="650"/><br/>
   <em>Figure 3: Iterative energy minimization convergence curve across 20 cycles demonstrating structural thermodynamic stabilization.</em>
 </p>
 <p align="center">
-  <img src="ramachandran_plot.jpg" alt="Ramachandran Plot Validation" width="650">
-</p>
-<p align="center">
+  <img src="ramachandran_plot.jpg" alt="Ramachandran Plot Validation" width="650"/><br/>
   <em>Figure 4: Ramachandran plot validation showing stereochemical backbone dihedral angles and model structural integrity.</em>
 </p>
 
 ---
 
-### 2. Active Site Identification & Contact Profiling
+### 3. Active Site Identification & Contact Profiling
 
 The orthosteric binding pocket was defined around critical conserved residues responsible for antagonist anchoring:
-
 <p align="center">
-  <img src="binding_site_contacts.jpg" alt="Active Site Contact Frequency" width="650"><br>
-  <p align="center">
-*Figure 5: Binding site residue contact frequency and pocket interaction topology.*
+  <img src="binding_site_contacts.jpg" alt="Active Site Contact Frequency" width="650"/><br/>
+  <em>Figure 5: Binding site residue contact frequency and pocket interaction topology.</em>
+</p>
+
+---
+
+### 4. Phytochemical Library Curation & Pre-Docking ADMET Filter
+A curated library of bioactive compounds was constructed from an ethnobotanical evaluation of over 65 gastroprotective and anti-reflux medicinal plants:
+
+* Toxicity & Safety Profiling: Compounds were rigorously profiled across critical safety endpoints using admetSAR and pkCSM (AMES mutagenicity, hERG I/II cardiotoxicity, hepatotoxicity, carcinogenicity, and oral LD50).
+* Tiered Stratification: Ligands passing toxicological cutoffs were stratified into 4 safety tiers; optimal drug-like candidates were assigned systematic identifiers (e.g., A1, B1, K5, AI1).
+* Docking Execution: Virtual screening was conducted via AutoDock 4 (16 conformational search runs per ligand), benchmarking binding affinities directly against native Histamine and clinical controls (Icotidine / Liquiritin).
 
 ---
 
@@ -116,17 +129,16 @@ To translate the computational lead into a commercial product, a solid oral loze
 
 ## 📂 Repository Structure
 ```text
-anti-reflux-h2r-phytochemical-screening/
-├── README.md                       # Comprehensive project documentation
-├── gastric_acid_pathway.jpg        # Target pathway & biological context
-├── swiss_model_h2r.jpg             # Homology modeling result
-├── energy_minimization.jpg         # Structural energy minimization profile
-├── ramachandran_plot.jpg           # Stereochemical validation plot
-├── binding_site_contacts.jpg       # Active site contact frequency
-├── docking_pose_01.jpg             # Docking binding pose for Curcumin (A1)
-├── docking_pose_02.jpg             # Docking binding pose for Galactomannan (B1)
-├── docking_pose_03.jpg             # Docking binding pose for Dill Seed (K5)
-└── docking_pose_04.jpg             # Docking binding pose for Black Myrobalan (AI1)
+├── README.md                              # Comprehensive project documentation & methodology
+├── gastric_acid_pathway.jpg               # Figure 1: Gastric acid secretion physiological pathway
+├── target_homology_model.jpg              # Figure 2: Human H2R 3D homology model (SWISS-MODEL)
+├── energy_minimization_curve.jpg          # Figure 3: Amber force field 20-cycle minimization trace
+├── ramachandran_plot.jpg                  # Figure 4: Stereochemical validation (PROCHECK/SAVES)
+├── binding_site_contacts.jpg              # Figure 5: Active site residue contact topology & frequencies
+├── docking_pose_1_curcumin.jpg            # Figure 6: Lead compound A1 (Curcumin) docking pose
+├── docking_pose_2_galactomannan.jpg       # Figure 7: Lead compound B1 (Galactomannan) docking pose
+├── docking_pose_3_dill_seed.jpg           # Figure 8: Lead compound K5 (Quercetin glucuronide) docking pose
+└── docking_pose_4_black_myrobalan.jpg     # Figure 9: Lead compound AI1 (Corilagin) docking pose
 
 ```
 
