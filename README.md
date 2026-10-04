@@ -77,10 +77,21 @@ The orthosteric binding pocket was defined around critical conserved residues re
 
 Selected natural leads exhibited favorable interaction topologies within the H2R binding pocket, forming strong hydrogen bonds and hydrophobic contacts with conserved residues:
 
-| Gingerol (Lead 01) | Glycyrrhizin (Lead 02) | Curcumin (Lead 03) |
-| :---: | :---: | :---: |
-| <img src="docking_pose_01.jpg" alt="Gingerol Pose" width="280"> | <img src="docking_pose_02.jpg" alt="Glycyrrhizin Pose" width="280"> | <img src="docking_pose_03.jpg" alt="Curcumin Pose" width="280"> |
-| *-7.2 kcal/mol* | *-7.9 kcal/mol* | *-7.5 kcal/mol* |
+<p align="center">
+  <img src="docking_pose_01.jpg" alt="Curcumin Docking Pose" width="45%">
+  <img src="docking_pose_02.jpg" alt="Galactomannan Docking Pose" width="45%">
+</p>
+<p align="center">
+  <em>(Left) Curcumin (A1, Run 24): 8 H-bonds within 5 Å | (Right) Galactomannan (B1, Run 1): 6 H-bonds within 5 Å</em>
+</p>
+
+<p align="center">
+  <img src="docking_pose_03.jpg" alt="Dill Seed Docking Pose" width="45%">
+  <img src="docking_pose_04.jpg" alt="Black Myrobalan Docking Pose" width="45%">
+</p>
+<p align="center">
+  <em>(Left) Dill Seed / K5 (Run 46): 5 H-bonds within 5 Å | (Right) Black Myrobalan / AI1: Hydrophobic pocket entrapment (0 H-bonds within 5 Å)</em>
+</p>
 
 ---
 
@@ -106,15 +117,16 @@ To translate the computational lead into a commercial product, a solid oral loze
 ## 📂 Repository Structure
 ```text
 anti-reflux-h2r-phytochemical-screening/
-├── README.md                      # Comprehensive project documentation
-├── gastric_acid_pathway.jpg       # Target pathway & biological context
-├── swiss_model_h2r.jpg            # Homology modeling result
-├── energy_minimization.jpg        # Structural energy minimization profile
-├── ramachandran_plot.jpg          # Stereochemical validation plot
-├── binding_site_contacts.jpg      # Active site contact frequency
-├── docking_pose_01.jpg            # Lead candidate 01 docking pose (Gingerol)
-├── docking_pose_02.jpg            # Lead candidate 02 docking pose (Glycyrrhizin)
-└── docking_pose_03.jpg            # Lead candidate 03 docking pose (Curcumin)
+├── README.md                       # Comprehensive project documentation
+├── gastric_acid_pathway.jpg        # Target pathway & biological context
+├── swiss_model_h2r.jpg             # Homology modeling result
+├── energy_minimization.jpg         # Structural energy minimization profile
+├── ramachandran_plot.jpg           # Stereochemical validation plot
+├── binding_site_contacts.jpg       # Active site contact frequency
+├── docking_pose_01.jpg             # Docking binding pose for Curcumin (A1)
+├── docking_pose_02.jpg             # Docking binding pose for Galactomannan (B1)
+├── docking_pose_03.jpg             # Docking binding pose for Dill Seed (K5)
+└── docking_pose_04.jpg             # Docking binding pose for Black Myrobalan (AI1)
 
 ```
 
