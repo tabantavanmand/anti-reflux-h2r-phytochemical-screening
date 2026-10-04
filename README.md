@@ -19,6 +19,7 @@ Gastroesophageal Reflux Disease (GERD) is a prevalent gastrointestinal motility 
 ## 🔬 Biological Context & Target Mechanism
 
 ![Gastric Acid Secretion Pathway](gastric_acid_pathway.jpg)
+
 *Figure 1: KEGG Gastric Acid Secretion pathway detailing Histamine H2 Receptor activation, cAMP-mediated protein kinase A signaling, and proton pump (H+/K+ ATPase) acid translocation in gastric parietal cells.*
 
 Histamine released from enterochromaffin-like (ECL) cells binds to the basolateral G protein-coupled $H_2$ receptor on parietal cells, stimulating adenylate cyclase and elevating intracellular cyclic AMP (cAMP). This activates the apical $H^+/K^+$ ATPase pump to secrete $HCl$. Blocking H2R effectively suppresses gastric acidity, promoting mucosal healing in reflux esophagitis.
@@ -39,17 +40,20 @@ Histamine released from enterochromaffin-like (ECL) cells binds to the basolater
 Due to the absence of high-resolution human H2R crystallographic data at the time of modeling, homology modeling was performed using SWISS-MODEL.
 
 ![SWISS-MODEL H2R Structure](swiss_model_h2r.jpg)
+
 *Figure 2: 3D Homology model of human Histamine H2 Receptor generated via SWISS-MODEL with transmembrane bundle conformation and structural quality evaluation.*
 
 Stereochemical and backbone conformational validity was verified using Ramachandran Plot Analysis:
 
 ![Ramachandran Plot](ramachandran_plot.jpg)
+
 *Figure 3: Ramachandran plot validation for modeled H2 receptor showing >90% of residues situated within core favored conformational regions.*
 
 ### 2. Active Site Identification & Contact Profiling
 The orthosteric binding pocket was defined around critical conserved residues responsible for antagonist binding and receptor inactivation (including Asp98, Asp186, Thr190, and aromatic cage residues).
 
 ![Binding Site Contacts](binding_site_contacts.jpg)
+
 *Figure 4: Binding site residue contact frequency and pocket interaction topology.*
 
 ---
@@ -69,6 +73,7 @@ Molecular docking was executed using AutoDock 4 (Lamarckian Genetic Algorithm). 
 
 #### Reference Benchmark Antagonist
 ![Benchmark Drug Docking Pose](docking_benchmark_pose.jpg)
+
 *Figure 5: Binding conformation of benchmark reference antagonist showing key anchoring interactions in the orthosteric pocket.*
 
 #### Lead Phytochemical Candidates
@@ -118,9 +123,10 @@ anti-reflux-h2r-phytochemical-screening/
 └── docking_pose_03.jpg # Lead candidate 03 docking pose
 ---
 
-## 👥 Project Attribution & Authors
-- Taban Tavanmand — Molecular Modeling, Docking Pipeline, ADMET Profiling, Industrial Formulation Design & Technical Documentation.
-- Biocamp Winter 2021 Project Team — Academic & Industrial Computational Drug Design Program.
+## 👥 Project Background & Team Attribution
 
----
-*Disclaimer: This repository represents translational academic and in-silico pharmaceutical research developed for educational, portfolio, and methodology demonstration purposes.*
+* Academic / Training Context: BioCamp (Spring 2021 / 1400) – Advanced Industrial Drug Discovery & Bioinformatics Pipeline.
+* Collaborative Research Team: Equal collaborative contributions across target homology modeling, docking simulations, pharmacokinetic evaluation, and formulation design:
+* * Taban Tavanmand *(documented as Atefeh Tavanmand in original academic course records)*
+  * Samaneh Kazem
+  * Mahya Mohammadzaheri
